@@ -16,10 +16,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#969696"
-            android:textSize="18dp"
+            android:textColor="#cf8b9596"
+            android:textSize="15dp"
             app:selectedColor="@color/colortheme"
-            app:footerIndicatorHeight="8dp"
             app:footerColor="@color/colortheme" />
     </FrameLayout>
 

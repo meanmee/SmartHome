@@ -14,7 +14,7 @@ import com.mi.wuxiaomin.smarthome.R;
  */
 public class MyFragment_More extends Fragment {
     private View mView;
-    private Activity mActivity;
+    protected static Activity mActivity_MyFragment_More;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -22,7 +22,4 @@ public class MyFragment_More extends Fragment {
         return mView;
     }
 
-    public  MyFragment_More(){
-        mActivity=getActivity();
-    }
 }

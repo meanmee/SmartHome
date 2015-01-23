@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/button"
+        android:id="@+id/button_test"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1E88E5"

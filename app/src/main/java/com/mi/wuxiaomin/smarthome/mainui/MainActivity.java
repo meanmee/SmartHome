@@ -25,8 +25,18 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initFragment();
         initControl();
         initViewPager();
+
+    }
+
+    ///将各个Fragment与MainAcyivity绑定
+    private void initFragment() {
+        MyFragment_Voice.mActivity_MyFragment_Voice = MainActivity.this;
+        MyFragment_Grid.mActivity_MyFragmen_Grid = MainActivity.this;
+        MyFragment_More.mActivity_MyFragment_More = MainActivity.this;
     }
 
     private void initControl() {
@@ -89,8 +99,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         protected void onPostExecute(String result) {
 
             mTabsAdapter.addTab(getString(R.string.string_GridView_Furniture), new MyFragment_Grid());
-            mTabsAdapter.addTab(getString(R.string.string_VoiceToCloud), new MyFragmen_Voice());
-
+            mTabsAdapter.addTab(getString(R.string.string_VoiceToCloud), new MyFragment_Voice());
             mTabsAdapter.addTab(getString(R.string.string_MoreSetting), new MyFragment_More());
 
             mTabsAdapter.notifyDataSetChanged();
