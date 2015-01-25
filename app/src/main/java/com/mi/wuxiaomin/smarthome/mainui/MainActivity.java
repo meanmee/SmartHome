@@ -10,6 +10,8 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.View.OnClickListener;
 
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.mi.wuxiaomin.smarthome.R;
 
 import java.util.ArrayList;
@@ -26,7 +28,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        SpeechUtility.createUtility(MainActivity.this, SpeechConstant.APPID + "=54c3a2b8");
         initFragment();
         initControl();
         initViewPager();

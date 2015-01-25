@@ -14,7 +14,7 @@ import com.mi.wuxiaomin.smarthome.mainui.MyFragment_Voice;
 /**
  * Created by wuxiaomin on 2015/1/24.
  */
-public class CloudRec {
+public class NativeRec {
     public static SpeechRecognizer mSpeechRec;
 
 
@@ -56,6 +56,7 @@ public class CloudRec {
         @Override
         public void onBeginOfSpeech() {
             MyFragment_Voice.mEdt_voice.append("开始");
+            Log.v("本地语音识别","开始");
         }
 
         @Override
@@ -69,9 +70,10 @@ public class CloudRec {
             if (recognizerResult != null) {
                 String mRes_string = JsonParse.parseIatResult(recognizerResult.getResultString());
                 MyFragment_Voice.mEdt_voice.append(mRes_string);
-                Log.d("1", mRes_string);
+                Log.v("本地语音识别","返回结果=："+mRes_string);
             } else {
                 MyFragment_Voice.mEdt_voice.append("无返回结果");
+                Log.v("本地语音识别","无返回结果");
             }
         }
 

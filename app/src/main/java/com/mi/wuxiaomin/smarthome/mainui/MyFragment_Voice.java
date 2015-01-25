@@ -13,7 +13,7 @@ import com.gc.materialdesign.views.Button;
 import com.iflytek.cloud.SpeechConstant;
 import com.iflytek.cloud.SpeechUtility;
 import com.mi.wuxiaomin.smarthome.R;
-import com.mi.wuxiaomin.smarthome.iflytek.CloudRec;
+import com.mi.wuxiaomin.smarthome.iflytek.NativeRec;
 import com.mi.wuxiaomin.smarthome.util.Task_Socket_Cloud;
 
 /**
@@ -74,7 +74,7 @@ public class MyFragment_Voice extends Fragment {
         mBtn_StartRec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {//开始手机录音识别
-                CloudRec.startRec_setPar(mActivity_MyFragment_Voice, null);
+                NativeRec.startRec_setPar(mActivity_MyFragment_Voice, null);
                 Toast.makeText(mActivity_MyFragment_Voice, "开始识别", Toast.LENGTH_SHORT).show();
             }
         });
