@@ -6,10 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.gc.materialdesign.views.Button;
+import com.iflytek.cloud.SpeechConstant;
+import com.iflytek.cloud.SpeechUtility;
 import com.mi.wuxiaomin.smarthome.R;
+import com.mi.wuxiaomin.smarthome.iflytek.CloudRec;
 import com.mi.wuxiaomin.smarthome.util.Task_Socket_Cloud;
 
 /**
@@ -17,9 +21,10 @@ import com.mi.wuxiaomin.smarthome.util.Task_Socket_Cloud;
  */
 public class MyFragment_Voice extends Fragment {
     private View mView;
-    protected static Activity mActivity_MyFragment_Voice;
-    private Button mbtn_test;
+    public static Activity mActivity_MyFragment_Voice;
+    private Button mbtn_Connect, mBtn_StartRec, mBtn_InitClo;
     private Task_Socket_Cloud mTSC = new Task_Socket_Cloud();
+    public static EditText mEdt_voice;
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mView = inflater.inflate(R.layout.voice_add, null);
@@ -35,19 +40,42 @@ public class MyFragment_Voice extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //创建用户语音配置对象
+
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
 
-        mbtn_test = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_test);
+        mEdt_voice = (EditText) mActivity_MyFragment_Voice.findViewById(R.id.edt_voice);
+        mbtn_Connect = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_connect);
+        mBtn_StartRec = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_startRec);
+        mBtn_InitClo = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_initClo);
 
-        mbtn_test.setOnClickListener(new View.OnClickListener() {
+
+        mBtn_InitClo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SpeechUtility.createUtility(MyFragment_Voice.mActivity_MyFragment_Voice, SpeechConstant.APPID + "=54c3a2b8");
+                Toast.makeText(mActivity_MyFragment_Voice, "初始化...", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mbtn_Connect.setOnClickListener(new View.OnClickListener() {//连接服务器
             @Override
             public void onClick(View view) {
                 new Task_Socket_Cloud().execute();
-                Toast.makeText(mActivity_MyFragment_Voice, "连接完毕", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        mBtn_StartRec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {//开始手机录音识别
+                CloudRec.startRec_setPar(mActivity_MyFragment_Voice, null);
+                Toast.makeText(mActivity_MyFragment_Voice, "开始识别", Toast.LENGTH_SHORT).show();
             }
         });
     }

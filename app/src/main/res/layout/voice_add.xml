@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_voice" />
+
+    <com.gc.materialdesign.views.ButtonFlat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_startRec"
+        android:text="开始语音识别"></com.gc.materialdesign.views.ButtonFlat>
 
     <com.gc.materialdesign.views.ButtonRectangle
-        android:id="@+id/button_test"
+        android:id="@+id/button_connect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#1E88E5"
         android:text="Button" />
+
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/button_initClo"
+        android:text="初始化云端识别"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.gc.materialdesign.views.ButtonFloat>
 </LinearLayout>

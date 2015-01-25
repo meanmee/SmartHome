@@ -26,6 +26,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         initFragment();
         initControl();
         initViewPager();

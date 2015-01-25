@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Study\smarthome+\SmartHome+\app\build\intermediates\exploded-aar\com.github.navasmdc\MaterialDesign\1.4\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="87405405e403de68f4057757b8a2e8de02bd65d0">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\classes-2363a6f944779685138a9036eacaf65806f17fb3.jar" />
+    </item>
+    <item
+        jar="C:\Study\smarthome+\SmartHome+\app\libs\Msc.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="7f64048fb4c00d0b4e352197d537b3799e03337f">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\Msc-82b40d2183485dab0780e45a6a8159ef3dd9dc23.jar" />
+    </item>
+    <item
+        jar="C:\Study\smarthome+\SmartHome+\app\libs\nineoldandroids-2.4.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="59f19e43354d32de831379c23ce03bb259a4c2b7">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\nineoldandroids-2.4.0-447698b44b7e712ebb855f4a1c88a4d6267b42a3.jar" />
+    </item>
+    <item
+        jar="C:\Study\smarthome+\SmartHome+\app\libs\android-support-v4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="db0f122c99ef9f90dbab3fada6d191f2880cbb8e">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\android-support-v4-202d14e62dd886ba735b098aed237aa86017aa87.jar" />
+    </item>
+
+</items>

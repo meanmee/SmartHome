@@ -22,11 +22,12 @@
 	<color name="pressed">#ffcccccc</color>
 	<color name="selected">#fff33fff</color>
 	<color name="focused">#ffff44ff</color>
+    <color name="fragment_background">#97cfcfd1</color>
 	
 	<color name="pathbtnBg">#cc474747</color>
 	<color name="pathbtnBg1">#00474747</color>
 	
 	<color name="hintcolor">#b2b2b2</color>
 	<color name="hintbgcolor">#ffffffff</color>
-    <color name="colortheme">#cf218996</color>
+    <color name="colortheme">#cf3785c3</color>
 </resources>
