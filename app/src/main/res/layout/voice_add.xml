@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <EditText
+    <com.rengwuxian.materialedittext.MaterialEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edt_voice" />
+        android:id="@+id/edt_voice"
+        android:hint="识别结果"
+        app:baseColor="@color/colortheme_blue"
+        app:primaryColor="@color/colortheme_blue"/>
 
     <com.gc.materialdesign.views.ButtonFlat
         android:layout_width="match_parent"
@@ -19,7 +23,7 @@
         android:id="@+id/button_connect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#1E88E5"
+        android:background="@color/colortheme_blue"
         android:text="Button" />
 
     <com.gc.materialdesign.views.ButtonFloat

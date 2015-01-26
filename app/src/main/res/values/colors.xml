@@ -29,5 +29,5 @@
 	
 	<color name="hintcolor">#b2b2b2</color>
 	<color name="hintbgcolor">#ffffffff</color>
-    <color name="colortheme">#cf3785c3</color>
+    <color name="colortheme_blue">#1E88E5</color>
 </resources>

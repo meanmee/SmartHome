@@ -16,6 +16,13 @@
         <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\Msc-82b40d2183485dab0780e45a6a8159ef3dd9dc23.jar" />
     </item>
     <item
+        jar="C:\Study\smarthome+\SmartHome+\app\build\intermediates\exploded-aar\com.rengwuxian.materialedittext\library\1.8.2\classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="26424233c1eec3a61981ac77e77d0ca3a8c118fa">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\classes-62925653c00f6b1334068e11e976e588b34c5fe3.jar" />
+    </item>
+    <item
         jar="C:\Study\smarthome+\SmartHome+\app\libs\nineoldandroids-2.4.0.jar"
         jumboMode="false"
         revision="19.1.0"
