@@ -9,6 +9,13 @@
         <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\classes-2363a6f944779685138a9036eacaf65806f17fb3.jar" />
     </item>
     <item
+        jar="C:\Study\smarthome+\SmartHome+\app\libs\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="973e832af433b44c3ed11c426f2f390b29f3f3f8">
+        <dex dex="C:\Study\smarthome+\SmartHome+\app\build\intermediates\pre-dexed\debug\gson-2.2.4-bc368b198830a6a860cc125106c1e7a54465ebd9.jar" />
+    </item>
+    <item
         jar="C:\Study\smarthome+\SmartHome+\app\libs\Msc.jar"
         jumboMode="false"
         revision="19.1.0"

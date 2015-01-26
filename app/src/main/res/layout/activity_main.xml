@@ -16,7 +16,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textColor="#cf8b9596"
+            android:textColor="@color/hintcolor"
             android:textSize="16dp"
             app:selectedColor="@color/colortheme_blue"
             app:footerColor="@color/colortheme_blue" />

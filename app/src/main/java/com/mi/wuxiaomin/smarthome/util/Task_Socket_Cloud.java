@@ -23,9 +23,9 @@ public class Task_Socket_Cloud extends AsyncTask {
     }
 
     @Override
-    public Object doInBackground(Object[] objects) {
-        Socket_Cloud.connect();
-        Socket_Cloud.sendToCloud("测试成功");
+    public  Object doInBackground(Object[] objects) {
+        Socket_Cloud.connect(MyFragment_Voice.mString_ipAddress);
+        Socket_Cloud.sendToCloud();
         return null;
     }
 
