@@ -55,15 +55,18 @@ public class MyFragment_Voice extends Fragment {
         mBtn_ipSetting = (Button) mActivity_MyFragment_Voice.findViewById(R.id.btn_ipSettting);
         mEdt_ipAddress = (EditText) mActivity_MyFragment_Voice.findViewById(R.id.edt_iPSetting);
 
+        //设置默认的ip地址
+        mEdt_ipAddress.setText("172.27.35.1");
+
         mBtn_ipSetting.setOnClickListener(new View.OnClickListener() {//设置好IP地址并连接
             @Override
-            public void onClick(View view) {
+            public void onClick(View view) {//设置ip地址并连接
                 if (mEdt_ipAddress == null) {
                     toastUtil("IP地址错误");
                 } else {
-                    mString_ipAddress=mEdt_ipAddress.getText().toString();
+                    mString_ipAddress = mEdt_ipAddress.getText().toString();
                     new Task_Socket_Cloud().execute();
-                    Log.v("IP连接button", "已执行excute（）方法");
+                    Log.v("MyFragment_Voice---mBtn_ipSetting", "已执行Task_Socket_Cloud的excute（）方法");
                 }
             }
         });
