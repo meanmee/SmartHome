@@ -7,7 +7,7 @@ import org.json.JSONTokener;
 /**
  * Created by wuxiaomin on 2015/1/24.
  */
-public class JsonParse {
+public class JsonParseIfyltek {
 
     public static String parseIatResult(String json) {
         StringBuffer ret = new StringBuffer();

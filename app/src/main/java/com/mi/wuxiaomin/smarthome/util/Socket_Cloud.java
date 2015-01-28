@@ -4,7 +4,10 @@ import android.util.Log;
 
 import org.json.JSONException;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -15,6 +18,11 @@ import java.net.Socket;
 public class Socket_Cloud {
 
     private static Socket mSocket_toCloud;
+    private static StringBuilder builder_jsonFromCloud = new StringBuilder();
+
+    public static StringBuilder getBuild_jsonFromCloud() {
+        return builder_jsonFromCloud;
+    }
 
     public static void connect(String IP) {
         try {
@@ -26,23 +34,19 @@ public class Socket_Cloud {
     public static void sendJsonToCloud() {
         try {
             //初始化Json数据
-            MyJsonParse.initJsonData();
+            MyJson.initJsonData();
 
-            Log.v("Socket_Cloud--sendJsonToCloud", "Json.toString():" + MyJsonParse.getJsonObj_send().toString());
+            Log.v("Socket_Cloud--sendJsonToCloud", "Json.toString():" + MyJson.getJsonObj_send().toString());
 
             OutputStream outputStream = mSocket_toCloud.getOutputStream();
-//            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream, "utf-8");
-//            BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-//            bufferedWriter.write(MyJsonParse.getJsonObj_send().toString());
+
             PrintWriter printWriter = new PrintWriter(outputStream);
 
-            printWriter.write(MyJsonParse.getJsonObj_send().toString());
+            printWriter.write(MyJson.getJsonObj_send().toString());
 
             printWriter.flush();
             printWriter.close();
 
-//            bufferedWriter.flush();
-//            bufferedWriter.close();
 
         } catch (IOException ioException) {
             Log.v("Socket_Cloud中的sendJsonToCloud", "输出流错误IO");
@@ -50,5 +54,25 @@ public class Socket_Cloud {
             Log.v("Socket_Cloud中的sendJsonToCloud", "初始化Json数据错误");
         }
 
+    }
+
+    public static void getJsonFromCloud() {
+        try {
+            InputStream inputStream = mSocket_toCloud.getInputStream();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream, "utf-8");
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            //读取流中的Json数据
+            String line;
+
+            while ((line = bufferedReader.readLine()) != null) {
+                builder_jsonFromCloud.append(line);
+            }
+            Log.v("Socket_Cloud中的sendJsonToCloud", "Json数据转换成StringBuilder结束");
+
+
+        } catch (IOException e) {
+
+
+        }
     }
 }

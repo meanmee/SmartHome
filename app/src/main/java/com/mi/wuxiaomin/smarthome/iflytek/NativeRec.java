@@ -68,7 +68,7 @@ public class NativeRec {
         public void onResult(RecognizerResult recognizerResult, boolean b) {
             //返回的是Json格式的数据，需要解析。
             if (recognizerResult != null) {
-                String mRes_string = JsonParse.parseIatResult(recognizerResult.getResultString());
+                String mRes_string = JsonParseIfyltek.parseIatResult(recognizerResult.getResultString());
                 MyFragment_Voice.mEdt_voice.append(mRes_string);
                 Log.v("本地语音识别","返回结果=："+mRes_string);
             } else {

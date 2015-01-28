@@ -21,9 +21,9 @@ import com.mi.wuxiaomin.smarthome.util.Task_Socket_Cloud;
 public class MyFragment_Voice extends Fragment {
     private View mView;
     public static Activity mActivity_MyFragment_Voice;
-    private Button mBtn_StartRec, mBtn_ipSetting;
+    private Button mBtn_StartRec, mBtn_ipSetting, mBtn_startQr;
     private Task_Socket_Cloud mTSC = new Task_Socket_Cloud();
-    public static EditText mEdt_voice, mEdt_ipAddress;
+    public static EditText mEdt_voice, mEdt_ipAddress, mEdt_qrResult,mEdt_jsonFromCloud;
     public static String mString_ipAddress;
 
 
@@ -34,14 +34,10 @@ public class MyFragment_Voice extends Fragment {
         return mView;
     }
 
-    //获取MainActivity
-    public MyFragment_Voice() {
-    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //创建用户语音配置对象
 
 
     }
@@ -54,9 +50,18 @@ public class MyFragment_Voice extends Fragment {
         mBtn_StartRec = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_startRec);
         mBtn_ipSetting = (Button) mActivity_MyFragment_Voice.findViewById(R.id.btn_ipSettting);
         mEdt_ipAddress = (EditText) mActivity_MyFragment_Voice.findViewById(R.id.edt_iPSetting);
+        mBtn_startQr = (Button) mActivity_MyFragment_Voice.findViewById(R.id.button_startRec);
+        mEdt_qrResult = (EditText) mActivity_MyFragment_Voice.findViewById(R.id.edt_qrResult);
+        mEdt_jsonFromCloud=(EditText)mActivity_MyFragment_Voice.findViewById(R.id.edt_jsonFormCloud);
 
         //设置默认的ip地址
         mEdt_ipAddress.setText("172.27.35.1");
+
+        mBtn_startQr.setOnClickListener(new View.OnClickListener() {//开始二维码识别
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
         mBtn_ipSetting.setOnClickListener(new View.OnClickListener() {//设置好IP地址并连接
             @Override

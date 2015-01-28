@@ -43,7 +43,41 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="连接"></com.gc.materialdesign.views.ButtonFlat>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_qrResult"
+            android:layout_weight="9"
+            app:baseColor="@color/colortheme_blue"
+            app:primaryColor="@color/colortheme_blue"
+            app:helperText="二维码扫描结果"
+            app:helperTextColor="@color/hintcolor" />
+
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btn_startr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="扫描"></com.gc.materialdesign.views.ButtonFlat>
 
     </LinearLayout>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_jsonFormCloud"
+        app:baseColor="@color/colortheme_blue"
+        app:primaryColor="@color/colortheme_blue"
+        app:helperText="Json获取结果"
+        app:helperTextColor="@color/hintcolor" />
 </LinearLayout>
