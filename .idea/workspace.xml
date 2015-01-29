@@ -21,12 +21,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="app: com.mi.wuxiaomin.smarthome" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de5dbe8d-7a0e-4a76-a467-9d4fd38fc796" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mi/wuxiaomin/smarthome/mainui/MyFragment_Voice.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mi/wuxiaomin/smarthome/mainui/MyFragment_Voice.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/voice_add.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/voice_add.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="de5dbe8d-7a0e-4a76-a467-9d4fd38fc796" name="Default" comment="" />
     <ignored path="Smart Home+.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
