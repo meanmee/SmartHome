@@ -80,4 +80,21 @@
         app:primaryColor="@color/colortheme_blue"
         app:helperText="Json获取结果"
         app:helperTextColor="@color/hintcolor" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btn_bindService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="绑定服务"></com.gc.materialdesign.views.ButtonFlat>
+        <com.gc.materialdesign.views.ButtonFlat
+            android:id="@+id/btn_unBindService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="解绑服务"></com.gc.materialdesign.views.ButtonFlat>
+        </LinearLayout>
 </LinearLayout>
